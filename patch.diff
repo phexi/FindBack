@@ -1,0 +1,17 @@
+*** Begin Patch
+*** Update File: D:\codex\ItemFinder\app\src\main\java\com\itemfinder\app\ui\screens\AddItemScreen.kt
+@@             )
+ 
++            // Location description
++            OutlinedTextField(
++                value = location,
++                onValueChange = { location = it },
++                label = { Text(stringResource(R.string.location_label)) },
++                placeholder = { Text(stringResource(R.string.location_placeholder)) },
++                modifier = Modifier.fillMaxWidth(),
++                singleLine = true,
++                shape = RoundedCornerShape(12.dp)
++            )
++
+             // Item photo
+*** End Patch

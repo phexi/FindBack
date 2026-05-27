@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FindBack</string>
+
+    <!-- HomeScreen -->
+    <string name="app_title">FindBack</string>
+    <string name="search_hint">Search item name…</string>
+    <string name="clear">Clear</string>
+    <string name="empty_no_items">No items added yet</string>
+    <string name="empty_search">No results for "%s"</string>
+    <string name="location_photo_hint">Storage location photo</string>
+    <string name="delete">Delete</string>
+
+    <!-- AddItemScreen -->
+    <string name="add_item_title">Add Item</string>
+    <string name="back">Back</string>
+    <string name="camera_permission_required">Camera permission is required to take photos</string>
+    <string name="item_name_label">Item Name</string>
+    <string name="item_name_placeholder">e.g. Bluetooth earphones, charger…</string>
+    <string name="section_item_photo">① Item Photo</string>
+    <string name="item_photo">Item Photo</string>
+    <string name="section_location_photo">② Storage Location Photo</string>
+    <string name="location_photo">Location Photo</string>
+    <string name="location_label">Storage Location</string>
+    <string name="location_placeholder">e.g. Living room drawer, study bookshelf…</string>
+    <string name="tap_to_take_photo">Tap to take photo</string>
+    <string name="add_more_photo">Take another photo</string>
+    <string name="location_photo_hint_multi">Take photos from large to small, e.g. Cabinet → Drawer → Exact spot</string>
+    <string name="error_name_required">Please enter the item name</string>
+    <string name="error_item_photo_required">Please take a photo of the item</string>
+    <string name="error_location_photo_required">Please take at least one location photo</string>
+    <string name="save_item">Save Item</string>
+
+    <!-- ItemDetailScreen -->
+    <string name="item_not_found">Item not found</string>
+    <string name="recorded_at">Recorded: %s</string>
+    <string name="section_item_photo_detail">📦 Item Photo</string>
+    <string name="section_location_photo_detail">📍 Storage Location Photo</string>
+    <string name="photo_step">Step %d</string>
+    <string name="tip_text">Follow the location photos step by step to find your items — never lose things again!</string>
+
+    <!-- ItemViewModel -->
+    <string name="save_failed">Save failed: %s</string>
+    <string name="scan_barcode">Scan Barcode</string>
+
+    <!-- Contact Us -->
+    <string name="contact_us">Contact Us</string>
+    <string name="contact_email">iguogx@gmail.com</string>
+    <string name="contact_title">Contact Us</string>
+    <string name="contact_message">If you have any questions or suggestions, please email us at:</string>
+</resources>

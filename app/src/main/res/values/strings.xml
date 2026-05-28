@@ -48,4 +48,7 @@
     <string name="contact_email">iguogx@gmail.com</string>
     <string name="contact_title">Contact Us</string>
     <string name="contact_message">If you have any questions or suggestions, please email us at:</string>
+    <!-- Privacy -->
+    <string name="privacy_title">Privacy Notice</string>
+    <string name="privacy_text">This app is fully offline. No data, photos, or personal information is ever transmitted or uploaded to the internet. All photos are stored locally on your device at:</string>
 </resources>

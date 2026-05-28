@@ -23,6 +23,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.itemfinder.app.data.ItemEntity
+import java.io.File
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -37,6 +38,8 @@ fun HomeScreen(
     val context = LocalContext.current
     var showContactDialog by remember { mutableStateOf(false) }
     val contactEmail = stringResource(R.string.contact_email)
+    val photosDir = File(context.filesDir, "photos").absolutePath
+    var showPrivacyDialog by remember { mutableStateOf(false) }
 
     // Contact Us dialog
     if (showContactDialog) {
@@ -79,6 +82,40 @@ fun HomeScreen(
         )
     }
 
+    // Privacy dialog
+    if (showPrivacyDialog) {
+        AlertDialog(
+            onDismissRequest = { showPrivacyDialog = false },
+            title = {
+                Text(
+                    text = stringResource(R.string.privacy_title),
+                    style = MaterialTheme.typography.headlineSmall,
+                    fontWeight = FontWeight.Bold
+                )
+            },
+            text = {
+                Column {
+                    Text(
+                        text = stringResource(R.string.privacy_text),
+                        style = MaterialTheme.typography.bodyLarge
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = photosDir,
+                        style = MaterialTheme.typography.bodyMedium,
+                        fontWeight = FontWeight.Medium,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = { showPrivacyDialog = false }) {
+                    Text(stringResource(R.string.back), style = MaterialTheme.typography.labelLarge)
+                }
+            }
+        )
+    }
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -88,6 +125,13 @@ fun HomeScreen(
                         Icon(
                             Icons.Default.Email,
                             contentDescription = stringResource(R.string.contact_us),
+                            tint = MaterialTheme.colorScheme.primary
+                        )
+                    }
+                    IconButton(onClick = { showPrivacyDialog = true }) {
+                        Icon(
+                            Icons.Default.Security,
+                            contentDescription = stringResource(R.string.privacy_title),
                             tint = MaterialTheme.colorScheme.primary
                         )
                     }
